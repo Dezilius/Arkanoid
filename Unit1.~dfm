@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 1798
-  Top = 265
+  Left = 1801
+  Top = 260
   Width = 657
   Height = 764
   Caption = 'Arkanoid'
@@ -7723,9 +7723,19 @@ object Form1: TForm1
     end
     inherited ComboBox1: TComboBox
       Top = 120
+      Height = 24
+      Font.Height = -13
+      Font.Name = 'MS Reference Sans Serif'
+      ItemHeight = 16
+      ParentFont = False
     end
     inherited ComboBox2: TComboBox
       Top = 120
+      Height = 24
+      Font.Height = -13
+      Font.Name = 'MS Reference Sans Serif'
+      ItemHeight = 16
+      ParentFont = False
     end
     inherited Button1: TButton
       Top = 152
