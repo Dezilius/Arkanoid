@@ -85,6 +85,7 @@ void __fastcall TForm1::Timer_ballTimer(TObject *Sender)
       ball->Visible = false;
       Button1->Caption = "Loose! Once more?";
       Button1->Visible = true;
+      Button1->Left = (Form1->ClientWidth / 2) - (Button1->Width / 2);
      }
      else if (ball->Left > paddle->Left - ball->Width/2 &&
      ball->Left < paddle->Left + paddle->Width &&
@@ -98,7 +99,9 @@ void __fastcall TForm1::Timer_ballTimer(TObject *Sender)
       ball->Visible = false;
       Button1->Caption = "win! Once more?";
       Button1->Visible = true;
+      Button1->Left = (Form1->ClientWidth / 2) - (Button1->Width / 2);
       Button2->Visible = true;
+      Button2->Left = (Form1->ClientWidth / 2) - (Button2->Width / 2);
 
 
       // Loading Score table
@@ -294,6 +297,8 @@ void __fastcall TForm1::FormCreate(TObject *Sender)
     Frame4->ComboBox2->Items->Add("Small");
     Frame4->ComboBox2->Items->Add("Average");
     Frame4->ComboBox2->Items->Add("Big");
+    Frame4->ComboBox1->ItemIndex = 1;
+    Frame4->ComboBox2->ItemIndex = 1;
 }
 //---------------------------------------------------------------------------
 
@@ -332,17 +337,17 @@ void __fastcall TForm1::Frame4Button2Click(TObject *Sender)
                     Image4->Left = 230;
                     Image4->Top = 50;
                     Image5->Left = 40;
-                    Image5->Top = 100;
+                    Image5->Top = 120;
                     Image6->Left = 100;
-                    Image6->Top = 100;
+                    Image6->Top = 120;
                     Image7->Left = 160;
-                    Image7->Top = 100;
+                    Image7->Top = 120;
                     Image8->Left = 220;
-                    Image8->Top = 100;
+                    Image8->Top = 120;
                     Image9->Left = 50;
-                    Image9->Top = 150;
+                    Image9->Top = 190;
                     Image10->Left = 50;
-                    Image10->Top = 150;
+                    Image10->Top = 190;
 
                     Image1->Visible = true;
                     Image2->Visible = true;
@@ -414,7 +419,7 @@ void __fastcall TForm1::Frame4Button2Click(TObject *Sender)
                 {win = 20; def_win = win;
 
                     Form1->ClientHeight = 800;
-                    Form1->ClientWidth = 800;
+                    Form1->ClientWidth = 750;
                                              // Position of bricks
                     Image1->Left = 100;
                     Image1->Top = 100;
@@ -440,17 +445,17 @@ void __fastcall TForm1::Frame4Button2Click(TObject *Sender)
                     Image11->Top = 150;
                     Image12->Left = 330;
                     Image12->Top = 150;
-                    Image13->Left = 0;
+                    Image13->Left = 100;
                     Image13->Top = 200;
-                    Image14->Left = 70;
+                    Image14->Left = 170;
                     Image14->Top = 200;
-                    Image15->Left = 140;
+                    Image15->Left = 240;
                     Image15->Top = 200;
-                    Image16->Left = 210;
+                    Image16->Left = 310;
                     Image16->Top = 200;
-                    Image17->Left = 280;
+                    Image17->Left = 380;
                     Image17->Top = 200;
-                    Image18->Left = 350;
+                    Image18->Left = 420;
                     Image18->Top = 200;
                     Image19->Left = 250;
                     Image19->Top = 250;
@@ -485,6 +490,8 @@ void __fastcall TForm1::Frame4Button2Click(TObject *Sender)
                 Frame4->Visible = false;
                 ball->Visible = true;
                 paddle->Visible = true;
+                Button1->Visible = false;
+                Button2->Visible = false;
                 ball->Left = Form1->ClientHeight/2 - 50 + (rand() % 40 - 20);
                 ball->Top = Form1->ClientWidth/2 - 50 + (rand() % 40 - 20);
                 paddle->Left = Form1->ClientWidth/2;

@@ -490,6 +490,8 @@ void __fastcall TForm1::Frame4Button2Click(TObject *Sender)
                 Frame4->Visible = false;
                 ball->Visible = true;
                 paddle->Visible = true;
+                Button1->Visible = false;
+                Button2->Visible = false;
                 ball->Left = Form1->ClientHeight/2 - 50 + (rand() % 40 - 20);
                 ball->Top = Form1->ClientWidth/2 - 50 + (rand() % 40 - 20);
                 paddle->Left = Form1->ClientWidth/2;

@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 1798
-  Top = 265
+  Left = 1801
+  Top = 260
   Width = 657
   Height = 764
   Caption = 'Arkanoid'

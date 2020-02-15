@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 1058
-  Top = 714
+  Left = 2115
+  Top = 372
   AutoScroll = False
   BorderWidth = 20
   Caption = 'Main Menu'
